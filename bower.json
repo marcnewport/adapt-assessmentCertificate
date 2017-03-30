@@ -1,0 +1,18 @@
+{
+    "name": "adapt-assessmentCertificate",
+    "repository": "git://github.com/marcnewport/adapt-assessmentCertificate",
+    "framework": "^2.0.0",
+    "version": "2.0.1",
+    "homepage": "https://github.com/marcnewport/adapt-assessmentCertificate",
+    "issues": "https://github.com/marcnewport/adapt-assessmentCertificate/issues/",
+    "displayName": "Assessment certificate",
+    "extension": "assessmentCertificate",
+    "description": "Generates a certificate as a png file (data uri) when an assessment is passed. Extending the functionality of the adapt-contrib-AssessmentResults component.",
+    "main": "/js/adapt-assessmentResultsExtension.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-extension"
+    ],
+    "license": "GPLv3",
+    "targetAttribute": "_assessmentCertificate"
+}

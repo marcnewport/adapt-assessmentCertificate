@@ -1,0 +1,9 @@
+<label id="assessment-certificate-aria" for="assessment-certificate-user-name" aria-label="{{{ _prompt.body }}}">
+    {{{ _prompt.body }}}
+</label>
+
+{{#if _userName }}
+    <input type="text" class="disabled" data-id="assessment-certificate-user-name" id="assessment-certificate-user-name" aria-labelledby="assessment-certificate-aria" value="{{ _userName }}" role="textbox" disabled="disabled">
+{{else}}
+    <input type="text" placeholder="{{{ _prompt.placeholder }}}" data-id="assessment-certificate-user-name" id="assessment-certificate-user-name" aria-labelledby="assessment-certificate-aria" value="" role="textbox">
+{{/if}}

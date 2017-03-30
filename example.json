@@ -1,0 +1,46 @@
+// To go in the components.json file as an extension to the assessmentResults component
+
+{
+    "_id": "c-105",
+    "_parentId": "b-105",
+    "_type": "component",
+    "_component": "assessmentResults",
+    "_classes": "",
+    "_layout": "full",
+    "title": "Results",
+    ...
+    "_certificate": {
+        "_buttons": {
+            "print": "Print certificate",
+            "yes": "Print certificate",
+            "no": "Cancel"
+        },
+        "_prompt": {
+            "title": "Well done!",
+            "body": "You have earned a certificate. Please enter your name as you would like it displayed on your certificate.",
+            "placeholder": "Your Name"
+        },
+        "_graphic": {
+            "src": "course/en/images/certificate.png",
+            "width": 1124,
+            "height": 800
+        },
+        "_styles": {
+            "_userName": {
+                "x": "center",
+                "y": 460,
+                "font": "48px Arial"
+            },
+            "_courseName": {
+                "x": "center",
+                "y": 525,
+                "font": "24px Arial"
+            },
+            "_courseDate": {
+                "x": 250,
+                "y": 650,
+                "font": "16px Arial"
+            }
+        }
+    }
+}
