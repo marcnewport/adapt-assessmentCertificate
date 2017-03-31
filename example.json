@@ -11,21 +11,22 @@
     ...
     "_certificate": {
         "_buttons": {
-            "print": "Print certificate",
-            "yes": "Print certificate",
+            "start": "Get Certificate",
+            "yes": "Get Certificate",
             "no": "Cancel"
         },
         "_prompt": {
-            "title": "Well done!",
-            "body": "You have earned a certificate. Please enter your name as you would like it displayed on your certificate.",
+            "title": "Congratulations!",
+            "body": "Well done, you have earned a certificate for completing the assessment. Enter your name below as you would like it displayed on your certificate.",
+            "instruction": "Enter your name and select Get Certificate",
             "placeholder": "Your Name"
         },
-        "_graphic": {
-            "src": "course/en/images/certificate.png",
-            "width": 1124,
-            "height": 800
-        },
-        "_styles": {
+        "_display": {
+            "_graphic": {
+                "src": "course/en/images/certificate.png",
+                "width": 1124,
+                "height": 800
+            },
             "_userName": {
                 "x": "center",
                 "y": 460,

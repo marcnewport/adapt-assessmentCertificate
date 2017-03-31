@@ -1,6 +1,17 @@
-<label id="assessment-certificate-aria" for="assessment-certificate-user-name" aria-label="{{{ _prompt.body }}}">
-    {{{ _prompt.body }}}
-</label>
+
+{{#if _prompt.body}}
+    <div class="assessment-certificate-body-text">
+        {{{a11y_text _prompt.body}}}
+    </div>
+{{/if}}
+
+{{#if _prompt.instruction}}
+    <div class="assessment-certificate-instruction-text">
+        <label id="assessment-certificate-aria" for="assessment-certificate-user-name" aria-label="{{{ _prompt.instruction }}}">
+            {{{a11y_text _prompt.instruction }}}
+        </label>
+    </div>
+{{/if}}
 
 {{#if _userName }}
     <input type="text" class="disabled" data-id="assessment-certificate-user-name" id="assessment-certificate-user-name" aria-labelledby="assessment-certificate-aria" value="{{ _userName }}" role="textbox" disabled="disabled">

@@ -7,7 +7,7 @@ define([
         /**
          * Called when an assessment is completed
          *
-         * @todo This method has been over-written, need to find docs on calling the super method
+         * @todo This method has been over-written, need to find docs on how to call super method
          */
         onAssessmentsComplete: function(state) {
 
@@ -41,7 +41,7 @@ define([
                     this.model.set('_isCertificateEnabled', true);
 
                     // Eventlistener for the certificate button
-                    // TODO : attach to events property
+                    // TODO : this should be attached to View's events property
                     this.$el.on('click', '.results-certificate-button', this.onCertificateShow.bind(this));
                 }
             }
@@ -121,36 +121,36 @@ define([
             var canvas = document.createElement('canvas');
             var context = canvas.getContext('2d');
 
-            canvas.width = certificate._graphic.width;
-            canvas.height = certificate._graphic.height;
+            canvas.width = certificate._display._graphic.width;
+            canvas.height = certificate._display._graphic.height;
 
             var graphic = new Image();
-            graphic.src = certificate._graphic.src;
+            graphic.src = certificate._display._graphic.src;
 
             // Load in a pre-defined certificate image, and draw in the details based on json data
             graphic.onload = function() {
                 context.drawImage(graphic, 0, 0);
 
                 // Draw in the user name
-                context.font = certificate._styles._userName.font;
+                context.font = certificate._display._userName.font;
                 var userNameWidth = context.measureText(userName).width;
-                var userNameX = certificate._styles._userName.x === 'center' ? (canvas.width - userNameWidth) / 2 : certificate._styles._userName.x;
-                context.fillText(userName, userNameX, certificate._styles._userName.y);
+                var userNameX = certificate._display._userName.x === 'center' ? (canvas.width - userNameWidth) / 2 : certificate._display._userName.x;
+                context.fillText(userName, userNameX, certificate._display._userName.y);
 
                 // Draw in the course name
-                context.font = certificate._styles._courseName.font;
+                context.font = certificate._display._courseName.font;
                 var courseName = Adapt.course.get('title');
                 var courseNameWidth = context.measureText(courseName).width;
-                var courseNameX = certificate._styles._courseName.x === 'center' ? (canvas.width - courseNameWidth) / 2 : certificate._styles._courseName.x;
-                context.fillText(courseName, courseNameX, certificate._styles._courseName.y);
+                var courseNameX = certificate._display._courseName.x === 'center' ? (canvas.width - courseNameWidth) / 2 : certificate._display._courseName.x;
+                context.fillText(courseName, courseNameX, certificate._display._courseName.y);
 
                 // Draw in the date
-                context.font = certificate._styles._courseDate.font;
+                context.font = certificate._display._courseDate.font;
                 var date = new Date();
                 var courseDate = date.toLocaleDateString();
                 var courseDateWidth = context.measureText(courseDate).width;
-                var courseDateX = certificate._styles._courseDate.x === 'center' ? (canvas.width - courseDateWidth) / 2 : certificate._styles._courseDate.x;
-                context.fillText(courseDate, courseDateX, certificate._styles._courseDate.y);
+                var courseDateX = certificate._display._courseDate.x === 'center' ? (canvas.width - courseDateWidth) / 2 : certificate._display._courseDate.x;
+                context.fillText(courseDate, courseDateX, certificate._display._courseDate.y);
 
                 // IE doesnt support browsing to a data uri
                 // So lets test if the msSaveBlob method is available (IE 10+)
