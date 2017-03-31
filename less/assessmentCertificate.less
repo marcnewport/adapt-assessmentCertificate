@@ -1,8 +1,18 @@
+.assessment-certificate-body-text {
+    margin-bottom: @body-text-margin;
+}
+
+.assessment-certificate-instruction-text {
+    font-weight: @instruction-text-font-weight;
+    margin-bottom: @instruction-text-margin;
+}
+
 #assessment-certificate-user-name {
     background: transparent;
-    border: none;
-    border-bottom: 2px solid @foreground-color;
-    color: @foreground-color;
-    font-size: @body-text-font-size * 2;
-    text-align: center;
+    border: 1px solid @notify-text-color;
+    padding: (@body-text-font-size / 2) @body-text-font-size;
+    border-radius: 3px;
+    color: @notify-text-color;
+    font-size: @body-text-font-size * 1.2;
+    margin-bottom: @body-text-margin;
 }
