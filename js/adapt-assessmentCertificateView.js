@@ -61,7 +61,7 @@ define([
             certificate._userName = Adapt.offlineStorage.get("userName");
 
             // Listen for the prompt events added to promptObject
-            this.listenToOnce(Adapt, "certificate:continue", this.certificateValidate);
+            this.listenToOnce(Adapt, "certificate:continue", this.certificateContinue);
             this.listenToOnce(Adapt, "certificate:cancel", this.certificateCancel);
 
             var promptObject = {
@@ -91,10 +91,9 @@ define([
         },
 
         /**
-         * [certificateValidate description]
-         * @return {[type]} [description]
+         * The continue handler
          */
-        certificateValidate: function() {
+        certificateContinue: function() {
             // Check a name was entered
             var userName = $('#assessment-certificate-user-name').val();
             var isValid = /[A-Za-z\-\s]{2,}/.test(userName);
@@ -106,9 +105,10 @@ define([
                 this.stopListening(Adapt, "certificate:continue");
             }
             else {
-                alert('no');
-                // TODO : stop execution, dont close the notify modal
-                return false;
+                // Stop the notify modal from closing
+                // TODO : There doesn't seem to be a method to stop the modal from closing
+                //        so just re-open it again for now
+                this.onCertificateShow();
             }
         },
 
