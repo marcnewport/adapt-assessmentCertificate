@@ -51,7 +51,7 @@ Extend the `adapt-contrib-AssessmentResults` component by adding a `_certificate
 
 ## Limitations
 
-**Cross-platform coverage:** Chrome, Firefox, Edge, IE11, IE10
+**Cross-platform coverage:** Chrome, Firefox, Edge, IE11, IE10, Safari for iOS, Chrome for Android
 
 ## Credits
 
