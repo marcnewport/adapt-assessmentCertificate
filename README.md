@@ -30,7 +30,7 @@ Extend the `adapt-contrib-AssessmentResults` component by adding a `_certificate
 > body|string|The body text of the modal prompt
 > instruction|string|The instruction text of the modal prompt (serves as for the user name input field)
 > placeholder|string|The placeholder text for the user name input field
-> blocked|string|The text alerted to the user if there popup blocker is enabled
+> blocked|string|The text alerted to the user if their popup blocker is enabled
 
 **_display**
 
