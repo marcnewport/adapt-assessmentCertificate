@@ -19,7 +19,8 @@
             "title": "Congratulations!",
             "body": "Well done, you have earned a certificate for completing the assessment. Enter your name below as you would like it displayed on your certificate.",
             "instruction": "Enter your name and select Get Certificate",
-            "placeholder": "Your Name"
+            "placeholder": "Your Name",
+            "blocked": "Popup blocker is enabled. Please add this site to your exception list."
         },
         "_display": {
             "_graphic": {

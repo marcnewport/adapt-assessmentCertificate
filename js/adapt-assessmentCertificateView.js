@@ -152,14 +152,22 @@ define([
                 var courseDateX = certificate._display._courseDate.x === 'center' ? (canvas.width - courseDateWidth) / 2 : certificate._display._courseDate.x;
                 context.fillText(courseDate, courseDateX, certificate._display._courseDate.y);
 
-                // IE doesnt support browsing to a data uri
-                // So lets test if the msSaveBlob method is available (IE 10+)
-                // Otherwise open the image in a new tab
+                // Even though IE11 has the canvas.toDataURL method, it doesn't work very well
+                // So let's use the msSaveBlob method if it's available (IE 10+)
                 if (window.navigator.msSaveBlob) {
                     window.navigator.msSaveBlob(canvas.msToBlob());
                 }
+                // Otherwise open the image in a new tab
                 else if (canvas.toDataURL) {
-                    window.open(canvas.toDataURL());
+                    var newTab = window.open(canvas.toDataURL());
+
+                    // Test if the browser's popup blocker is enabled
+                    if (! newTab || newTab.closed || typeof newTab.closed === 'undefined') {
+                        alert(certificate._prompt.blocked);
+                    }
+                }
+                else {
+                    alert('Your browser does not support certificate generation.');
                 }
             }
         }
