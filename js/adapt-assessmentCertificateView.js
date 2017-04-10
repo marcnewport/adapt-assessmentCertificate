@@ -157,8 +157,8 @@ define([
                 if (window.navigator.msSaveBlob) {
                     window.navigator.msSaveBlob(canvas.msToBlob());
                 }
-                // Otherwise open the image in a new tab
-                else if (canvas.toDataURL) {
+                // Otherwise open the image in a new tab 
+                else if (typeof canvas.toDataURL === 'function') {
                     var newTab = window.open(canvas.toDataURL());
 
                     // Test if the browser's popup blocker is enabled
