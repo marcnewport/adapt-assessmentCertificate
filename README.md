@@ -30,6 +30,7 @@ Extend the `adapt-contrib-AssessmentResults` component by adding a `_certificate
 > body|string|The body text of the modal prompt
 > instruction|string|The instruction text of the modal prompt (serves as for the user name input field)
 > placeholder|string|The placeholder text for the user name input field
+> blocked|string|The text alerted to the user if there popup blocker is enabled
 
 **_display**
 
@@ -38,14 +39,14 @@ Extend the `adapt-contrib-AssessmentResults` component by adding a `_certificate
 > _graphic.src|string|The path to the certificate graphic
 > _graphic.width|int|The width of the certificate graphic
 > _graphic.height|int|The height of the certificate graphic
-> _userName.x|int/string|The x position for the placement of the user name (use `"center"` to centre the text relative to the certificate with)
-> _userName.y|int|The y position for the placement of the user name
+> _userName.x|int/string|The x position in pixels for the placement of the user name (use `"center"` to centre the text relative to the certificate with)
+> _userName.y|int|The y position in pixels for the placement of the user name
 > _userName.font|string|The style of font to use eg. `"48px Arial"`
-> _courseName.x|int/string|The x position for the placement of the user name (use `"center"` to centre the text relative to the certificate with)
-> _courseName.y|int|The y position for the placement of the user name
+> _courseName.x|int/string|The x position in pixels for the placement of the user name (use `"center"` to centre the text relative to the certificate with)
+> _courseName.y|int|The y position in pixels for the placement of the user name
 > _courseName.font|string|The style of font to use eg. `"48px Arial"`
-> _courseDate.x|int/string|The x position for the placement of the user name (use `"center"` to centre the text relative to the certificate with)
-> _courseDate.y|int|The y position for the placement of the user name
+> _courseDate.x|int/string|The x position in pixels for the placement of the user name (use `"center"` to centre the text relative to the certificate with)
+> _courseDate.y|int|The y position in pixels for the placement of the user name
 > _courseDate.font|string|The style of font to use eg. `"48px Arial"`
 
 
