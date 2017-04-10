@@ -1,9 +1,9 @@
 {
     "name": "adapt-assessmentCertificate",
-    "version": "0.2.1",
-    "framework": "^2.0.0",
-    "homepage": "https://github.com/marcnewport/adapt-assessmentCertificate",
     "repository": "git://github.com/marcnewport/adapt-assessmentCertificate",
+    "framework": "^2.0.0",
+    "version": "0.2.1",
+    "homepage": "https://github.com/marcnewport/adapt-assessmentCertificate",
     "issues": "https://github.com/marcnewport/adapt-assessmentCertificate/issues/",
     "displayName": "Assessment certificate",
     "extension": "assessmentCertificate",
