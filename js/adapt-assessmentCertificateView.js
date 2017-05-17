@@ -96,7 +96,7 @@ define([
         certificateContinue: function() {
             // Check a name was entered
             var userName = $('#assessment-certificate-user-name').val();
-            var isValid = /[A-Za-z\-\s]{2,}/.test(userName);
+            var isValid = /[A-Za-z\u4e00-\u9eff\-\s]{2,}/.test(userName);
 
             if (isValid) {
                 // Add the username to the LMS
@@ -169,7 +169,7 @@ define([
                 else {
                     alert('Your browser does not support certificate generation.');
                 }
-            }
+            };
         }
     };
 
